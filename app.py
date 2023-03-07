@@ -41,7 +41,7 @@ if st.sidebar.checkbox('Recorridos por hora'):
 
 
 
-hour_to_filter = st.slider('hour', 0, 23, 11)
+hour_to_filter = sidebar.slider('hour', 0, 23, 11)
 filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
 
 st.subheader('Mapa de recorridos iniciados a las  %s:00' % hour_to_filter)
